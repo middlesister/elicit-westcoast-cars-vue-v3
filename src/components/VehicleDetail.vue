@@ -1,5 +1,13 @@
 <template>
-  <section>Här kommer bilen att finnas</section>
+  <section class="card">
+    <div class="vehicle-item">
+      <div>{{ vehicle.registrationNo }}</div>
+      <div>{{ vehicle.make }}</div>
+      <div>{{ vehicle.model }}</div>
+      <div>{{ vehicle.modelYear }}</div>
+      <div>{{ vehicle.mileage }}</div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -11,7 +19,7 @@
             id: 1,
             registrationNo: 'ABC123',
             make: 'Chevrolet',
-            model: 'COrvette',
+            model: 'Corvette',
             modelYear: '2015',
             imageUrl: '',
             mileage: 15000,
@@ -21,3 +29,12 @@
     },
   };
 </script>
+
+<style>
+  .vehicle-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
