@@ -13,28 +13,17 @@
     </div>
   </header>
   <main class="content">
-    <vehicle-detail></vehicle-detail>
-    <!-- <vehicle-detail
-      image-url="https://i.postimg.cc/85xqHwJQ/car1.jpg"
-      registration-no="CER932"
-      model="Chevrolet"
-      model-year="2015"
-      mileage="15000"
-      description=""></vehicle-detail>
     <vehicle-detail
-      image-url="https://i.postimg.cc/85xqHwJQ/car2.jpg"
-      registration-no="CER932"
-      model="Ford"
-      model-year="2015"
-      mileage="15000"
-      description=""></vehicle-detail>
-    <vehicle-detail
-      image-url="https://i.postimg.cc/85xqHwJQ/car3.jpg"
-      registration-no="CER932"
-      model="Volvo"
-      model-year="2015"
-      mileage="15000"
-      description=""></vehicle-detail> -->
+      v-for="vehicle in vehicles"
+      v-bind:key="vehicle.id"
+      v-bind:image-url="vehicle.imageUrl"
+      v-bind:registration-no="vehicle.registrationNo"
+      v-bind:make="vehicle.make"
+      v-bind:model="vehicle.model"
+      v-bind:model-year="vehicle.modelYear"
+      v-bind:mileage="vehicle.mileage"
+      v-bind:description="vehicle.description"
+    ></vehicle-detail>
   </main>
 </template>
 
