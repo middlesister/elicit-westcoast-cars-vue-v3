@@ -12,10 +12,18 @@
       </ul>
     </div>
   </header>
+  <main class="content">
+    <vehicle-detail></vehicle-detail>
+    <vehicle-detail></vehicle-detail>
+    <vehicle-detail></vehicle-detail>
+  </main>
 </template>
 
 <script>
+  import VehicleDetail from './components/VehicleDetail.vue';
+
   export default {
+    components: {VehicleDetail},
     data() {
       return {
         title: 'Välkommen till vår sajt',
