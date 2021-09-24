@@ -13,7 +13,8 @@
     </div>
   </header>
   <main class="content">
-    <vehicle-detail
+    <vehicle-detail></vehicle-detail>
+    <!-- <vehicle-detail
       image-url="https://i.postimg.cc/85xqHwJQ/car1.jpg"
       registration-no="CER932"
       model="Chevrolet"
@@ -33,7 +34,7 @@
       model="Volvo"
       model-year="2015"
       mileage="15000"
-      description=""></vehicle-detail>
+      description=""></vehicle-detail> -->
   </main>
 </template>
 
@@ -41,10 +42,27 @@
   import VehicleDetail from './components/VehicleDetail.vue';
 
   export default {
-    components: {VehicleDetail},
+    components: { VehicleDetail },
     data() {
       return {
+        vehicles: [],
         title: 'Välkommen till vår sajt',
+      }
+    },
+    created() {
+      this.loadAllVehicles();
+    },
+    methods: {
+      async loadAllVehicles() {
+        const response = await fetch('/data/vehicles.json');
+
+        if( !response.ok ) throw new Error(response.statusText);
+
+        const vehicles = await response.json();
+
+        this.vehicles = vehicles.map((vehicle) => {
+          return vehicle;
+        });
       }
     }
   } 
