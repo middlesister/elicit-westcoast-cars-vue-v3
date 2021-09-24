@@ -13,9 +13,27 @@
     </div>
   </header>
   <main class="content">
-    <vehicle-detail></vehicle-detail>
-    <vehicle-detail></vehicle-detail>
-    <vehicle-detail></vehicle-detail>
+    <vehicle-detail
+      image-url="https://i.postimg.cc/85xqHwJQ/car1.jpg"
+      registration-no="CER932"
+      model="Chevrolet"
+      model-year="2015"
+      mileage="15000"
+      description=""></vehicle-detail>
+    <vehicle-detail
+      image-url="https://i.postimg.cc/85xqHwJQ/car2.jpg"
+      registration-no="CER932"
+      model="Ford"
+      model-year="2015"
+      mileage="15000"
+      description=""></vehicle-detail>
+    <vehicle-detail
+      image-url="https://i.postimg.cc/85xqHwJQ/car3.jpg"
+      registration-no="CER932"
+      model="Volvo"
+      model-year="2015"
+      mileage="15000"
+      description=""></vehicle-detail>
   </main>
 </template>
 
